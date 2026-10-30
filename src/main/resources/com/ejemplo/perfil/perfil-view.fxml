@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.ejemplo.perfil.PerfilController"
+      spacing="20"
+      alignment="CENTER">
+
+    <Label text="Bienvenido al Gestor de Perfil" styleClass="titulo" />
+
+    <Label text="Nombre:"/>
+
+    <TextField fx:id="txtNombre"
+               promptText="Introduce tu nombre"
+               maxWidth="300"/>
+
+    <Label text="Mail:"/>
+
+    <TextField fx:id="txtMail"
+               promptText="Introduce tu mail"
+               maxWidth="300"/>
+
+    <Label text="Edad:"/>
+
+    <TextField fx:id="txtEdad"
+               promptText="Introduce tu edad"
+               maxWidth="300"/>
+
+    <Label text="Estudios:"/>
+
+    <ComboBox fx:id="cmbEstudios"
+              promptText="Selecciona tus estudios"
+              maxWidth="300"/>
+
+    <Label fx:id="lblMensaje"
+           wrapText="true"/>
+
+    <HBox alignment="CENTER"
+           spacing="15">
+
+        <Button text="Mostrar Resumen"
+                onAction="#mostrarResumen" />
+
+        <Button text="Limpiar"
+                onAction="#limpiarFormulario" />
+
+    </HBox>
+
+
+
+</VBox>

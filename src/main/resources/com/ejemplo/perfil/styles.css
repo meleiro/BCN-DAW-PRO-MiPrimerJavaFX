@@ -4,6 +4,8 @@
 
 /* TODO: Configurar tamaño de letra y negrita de .titulo. */
 .titulo {
+  -fx-font-size: 26px;
+  -fx-font-weigth: bold;
 }
 
 /* TODO: Establecer ancho preferido y tamaño de letra de los TextField. */
