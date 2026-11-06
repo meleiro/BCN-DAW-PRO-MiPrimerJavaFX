@@ -1,13 +1,16 @@
 package com.ejemplo.perfil;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
-
+import javafx.stage.Stage;
 
 
 import java.awt.*;
+import java.io.IOException;
 
 public class PerfilController {
 
@@ -69,6 +72,8 @@ public class PerfilController {
 
         lblMensaje.setText(resumen);
 
+        abrirVentanaResumen(nombre, email, estudios );
+
 
 
     }
@@ -82,6 +87,36 @@ public class PerfilController {
         cmbEstudios.getSelectionModel().clearSelection();
         lblMensaje.setText("");
 
+    }
+
+    @FXML
+    private void abrirVentanaResumen(String nombre, String email, String preferencias){
+
+        try {
+            FXMLLoader loader = new FXMLLoader(
+                    MainApplication.class.getResource("resumen-view.fxml")
+            );
+
+            Scene scene = new Scene(loader.load());
+
+            ResumenController controller =
+                    loader.getController();
+
+            controller.cargarDatos(nombre, email, preferencias);
+
+            Stage stage = new Stage();
+
+            stage.setTitle("Resumen del perfil de" + nombre );
+
+            stage.setScene(scene);
+
+            stage.show();
+
+
+
+        } catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
 
