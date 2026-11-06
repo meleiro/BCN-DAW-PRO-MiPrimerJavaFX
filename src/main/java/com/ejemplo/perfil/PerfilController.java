@@ -28,7 +28,7 @@ public class PerfilController {
 
     @FXML
     private void initialize(){
-        cmbEstudios.getItems().addAll("DAM", "DAW", "ASIR");
+        cmbEstudios.getItems().addAll("Elige un estudio","DAM", "DAW", "ASIR");
     }
 
 
@@ -45,7 +45,7 @@ public class PerfilController {
 
         String estudios = cmbEstudios.getValue();
 
-        if (estudios == null)
+        if (estudios == "Elige un estudio")
         {
             lblMensaje.setText("Tienes que introducir algún estudio");
             return;

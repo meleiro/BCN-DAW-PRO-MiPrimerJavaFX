@@ -25,7 +25,7 @@ public class MainApplication extends Application {
 
        stage.setScene(scene);
 
-       stage.setTitle("Gstor de Perfil - JavaFX");
+       stage.setTitle("Getor de Perfil - JavaFX");
 
        stage.show();
 
